@@ -1,28 +1,17 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+//import DataUsers from './services/fetchData';
 import './App.css';
+import UsersPage from './app/users/UsersPage';
+import HeaderPost from './app/users/Header';
+import FooterPost from './app/users/Footer';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+
+const App = () => (
+  <>
+    <HeaderPost />
+    <UsersPage />
+    <FooterPost />
+  </>
+)
 
 export default App;
