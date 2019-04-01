@@ -1,4 +1,5 @@
 import React from 'react';
+import UsersPageCard from '../users/UserPageCard';
 
 const HeaderPost = () => (
     <>
@@ -10,7 +11,8 @@ const HeaderPost = () => (
 
                     <li><a href="index.html"><i className="fas fa-redo-alt"></i></a></li>
                     {/* <li><a href="#"><i className="fas fa-grip-horizontal"></i></a></li> */}
-                    <li><a href="#"><i class="fas fa-th-list"></i></a></li>
+                    <li><a href="#" ><i className="fas fa-th-list"></i></a></li>
+                    {/* <input type=" text" onChange={this.handlerChange} /> */}
                 </ul>
             </div>
 

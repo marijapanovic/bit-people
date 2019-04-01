@@ -1,6 +1,7 @@
 
 import React from 'react';
 import fetchUsers from '../../services/fetchData';
+import HeaderPost from '../users/Header';
 //import Users from './../../entities/users';
 
 class UsersPageCard extends React.Component {
@@ -8,8 +9,13 @@ class UsersPageCard extends React.Component {
         super(props)
 
         this.state = {
-            users: []
+            users: [],
+            listItems: localStorage.getItem('state')
         }
+    }
+
+    handlerChange() {
+        // console.log("this.state.listItems");
     }
 
     componentDidMount() {
@@ -17,6 +23,7 @@ class UsersPageCard extends React.Component {
             .then((users) => {
                 this.setState({
                     users: users
+
                 })
             })
     }
