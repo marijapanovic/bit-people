@@ -11,7 +11,7 @@ const fetchUsers = () => (
                 .map((element) => {
 
                     let fullName = `${element.name.first} ${element.name.last}`;
-                    let mediumPicture = element.picture.medium;
+                    let mediumPicture = element.picture;
                     let dateBirth = new Date(element.dob.date);
                     let oneMail = element.email;
                     let et = oneMail.indexOf('@');
@@ -24,7 +24,7 @@ const fetchUsers = () => (
                         mediumPicture,
                         fullName,
                         hideMail,
-                        dateBirth.toDateString()
+                        dateBirth
                     )
                 })
 

@@ -30,7 +30,9 @@ h3 {
 }
 .row {
   width: 80%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin-left: auto;
+  /* margin-right: auto; */
 }
 
 li {
@@ -38,5 +40,6 @@ li {
   padding: 1% 2%;
 }
 .card {
-  -webkit-box-shadow: none;
+  /* -webkit-box-shadow: none; */
+  margin-right: 2%;
 }

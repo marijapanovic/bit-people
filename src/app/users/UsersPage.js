@@ -28,10 +28,10 @@ class UsersPage extends React.Component {
                         <ul className="collection">
                             {this.state.users.map((user) => (
                                 <li key={user.id} className="collection-item avatar">
-                                    <img src={user.picture} alt="" className="circle" />
+                                    <img src={user.picture.medium} alt="" className="circle" />
                                     <p className="title">{user.name}</p>
                                     <p><i className="fas fa-envelope"></i>  {user.email}</p>
-                                    <p><i className="fas fa-birthday-cake"></i>  {user.dateOfBirth}</p>
+                                    <p><i className="fas fa-birthday-cake"></i>  {user.dateOfBirth.toDateString()}</p>
                                 </li>
                             )
                             )}
