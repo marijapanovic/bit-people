@@ -1,7 +1,7 @@
 import React from 'react';
-import UsersPageCard from '../users/UserPageCard';
+//import UsersPageCard from '../users/UserPageCard';
 
-class HeaderPost extends React.Component {
+class Header extends React.Component {
     constructor(props) {
         super(props)
         this.displayChangeClick = this.displayChangeClick.bind(this);
@@ -24,9 +24,9 @@ class HeaderPost extends React.Component {
                 <h1 className="brand-logo center">BIT Persons</h1>
 
                 <ul className="right">
+                    <li><i onClick={this.props.onRefresh} className="fas fa-redo-alt"></i></li>
+                    <li><i onClick={this.displayChangeClick} className={hrefClassName}></i></li>
 
-                    <li><a href="index.html"><i className="fas fa-redo-alt"></i></a></li>
-                    <li><a href="#" onClick={this.displayChangeClick}><i className={hrefClassName}></i></a></li>
                 </ul>
             </div>
 
@@ -36,6 +36,6 @@ class HeaderPost extends React.Component {
     }
 }
 
-export default HeaderPost
+export default Header
 
 

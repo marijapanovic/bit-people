@@ -1,33 +1,45 @@
 import React from 'react';
-import HeaderPost from './Header';
+import Header from './Header';
 import UsersPage from './UsersPage';
 import FooterPost from './Footer';
-import UsersPageCard from './UserPageCard'
+
 
 class MainPage extends React.Component {
     constructor(props) {
         super(props)
         this.handleDisplayChange = this.handleDisplayChange.bind(this);
+        this.handleRefresh = this.handleRefresh.bind(this);
         this.state = {
-            display: 'list'
+            display: 'list',
+            pageKey : new Date()
+
         }
     }
 
+    handleRefresh(){
+        this.setState({
+            pageKey: new Date()
+            
+        });
+    }
     handleDisplayChange(newDisplay) {
-        this.setState({display: newDisplay});
+        this.setState({
+            display: newDisplay
+        });
     }
 
     render() {
-        let body;
-        if (this.state.display === "list") {
-            body = <UsersPage />;
-        } else {
-            body = <UsersPageCard />;
-        }
         return (
             <>
-                <HeaderPost display={this.state.display} onDisplayChange={this.handleDisplayChange} />
-                {body}
+                <Header display={this.state.display} 
+                onDisplayChange={this.handleDisplayChange} 
+                onRefresh={this.handleRefresh} />
+
+                <UsersPage display={this.state.display} 
+                key={this.state.pageKey}
+
+                />
+
                 <FooterPost />
             </>
         )

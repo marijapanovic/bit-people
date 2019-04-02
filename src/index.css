@@ -30,9 +30,8 @@ h3 {
 }
 .row {
   width: 80%;
-  /* margin: 0 auto; */
   margin-left: auto;
-  /* margin-right: auto; */
+
 }
 
 li {
@@ -42,4 +41,7 @@ li {
 .card {
   /* -webkit-box-shadow: none; */
   margin-right: 2%;
+}
+.female{
+  background-color: #ffebee !important;
 }
