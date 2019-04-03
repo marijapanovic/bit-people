@@ -3,9 +3,6 @@ import Header from './Header';
 import UsersPage from './UsersPage';
 import FooterPost from './Footer';
 
-
-
-
 class MainPage extends React.Component {
     constructor(props) {
         super(props)
@@ -22,10 +19,12 @@ class MainPage extends React.Component {
         });
     }
     handleDisplayChange(newDisplay) {
+        localStorage.setItem('view', newDisplay);
         this.setState({
             display: newDisplay
         });
     }
+
 
     render() {
         return (
@@ -39,7 +38,6 @@ class MainPage extends React.Component {
                 <UsersPage display={this.state.display}
                     key={this.state.pageKey}
                     onChange={this.handleInputChange}
-
                 />
 
                 <FooterPost />

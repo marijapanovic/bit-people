@@ -20,7 +20,6 @@ class UsersPage extends React.Component {
                     allUsers: users,
                     users: users
                 })
-                console.log(users);
             })
     }
 
@@ -33,8 +32,6 @@ class UsersPage extends React.Component {
         this.setState({
             users: filteredUsers
         })
-
-        console.log(filteredUsers);
     }
 
     render() {
