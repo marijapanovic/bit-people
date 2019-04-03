@@ -16,7 +16,7 @@ const fetchUsers = () => (
                     let oneMail = element.email;
                     let et = oneMail.indexOf('@');
                     let hideMail = oneMail.slice(0, 3) + "..." +
-                     oneMail.slice(et - 3, et) + oneMail.slice(et);
+                        oneMail.slice(et - 3, et) + oneMail.slice(et);
                     let gender = element.gender
 
 

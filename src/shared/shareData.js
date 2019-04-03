@@ -1,6 +1,5 @@
-//import React from 'react';
 
 const FetchUrl = {
-    url: 'https://randomuser.me/api/?results=15',
+    url: 'https://randomuser.me/api/?results=50',
 }
 export { FetchUrl } 

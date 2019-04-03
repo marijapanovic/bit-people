@@ -11,16 +11,12 @@ class MainPage extends React.Component {
         this.handleRefresh = this.handleRefresh.bind(this);
         this.state = {
             display: (localStorage.getItem('view') === null) ? 'list' : localStorage.getItem('view'),
-            pageKey: new Date()
-
+            pageKey: new Date(),
         }
     }
-
-
     handleRefresh() {
         this.setState({
             pageKey: new Date()
-
         });
     }
     handleDisplayChange(newDisplay) {
@@ -28,18 +24,19 @@ class MainPage extends React.Component {
             display: newDisplay
         });
     }
+
     render() {
-
         return (
-
             <>
                 <Header
                     display={this.state.display}
                     onDisplayChange={this.handleDisplayChange}
-                    onRefresh={this.handleRefresh} />
+                    onRefresh={this.handleRefresh}
+                />
 
                 <UsersPage display={this.state.display}
                     key={this.state.pageKey}
+                    onChange={this.handleInputChange}
 
                 />
 
