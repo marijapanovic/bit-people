@@ -3,6 +3,7 @@ import Header from './Header';
 import UsersPage from './UsersPage';
 import FooterPost from './Footer';
 
+
 class MainPage extends React.Component {
     constructor(props) {
         super(props)

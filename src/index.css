@@ -54,6 +54,10 @@ li {
   margin-right: 10px;
 }
 
+.about{
+  font-size: 1.7em;
+}
+
 /* Cube ------------------------------------------------------------------*/
 .sk-cube-grid {
   width: 140px;
